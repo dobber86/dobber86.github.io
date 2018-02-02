@@ -1,1 +1,0 @@
-//Hier komt mijn JavaScript
