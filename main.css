@@ -1,0 +1,149 @@
+html,
+body {
+	background-color: rgb(255,204,153);
+	font-family: Arial;
+	height: 100%;
+	margin: 0;
+}
+
+header,
+footer {
+	background-color: rgb(255,128,0);
+	color: white;
+	text-align: center;
+}
+
+header {
+	height: 80px;
+	padding: 10px;
+}
+
+footer {
+	height: 50px;
+	padding: 10px;
+}
+
+footer a {
+	height: 60px;
+	line-height: 60px;
+	color: #204156;
+	text-decoration: none;
+}
+
+p,
+a {
+	
+}
+
+h2 {
+	border: 2px solid black;
+	height: 30px;
+	padding: 10px;
+	position: relative;
+	left: 50px;
+}
+
+input {
+	width: 70px;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+		/*TEAMS*/
+
+.teams {
+	background-color: rgb(192,192,192);
+	padding: 10px;
+	min-width: 200px;
+}
+
+.teams h2 {
+	width: 100px;
+}
+
+.teams ul {
+	list-style-type: none;
+}
+
+
+		/*WEDSTRIJDEN*/
+
+.wedstrijden {
+	background-color: rgb(224,224,224);
+	padding: 10px;
+	width: 700px;
+}
+
+.wedstrijden h2{
+	width: 580px;
+}
+
+.wedstrijdenschema {
+/*	display: flex;
+	flex-wrap: wrap; 
+	justify-content: center;*/
+}
+
+.wedstrijden table {
+	border: 1px solid black;
+	margin: 50px;
+	width: 600px;
+}
+
+.wedstrijden th,
+.wedstrijden td {
+	padding: 5px;
+	text-align: center;
+}
+
+.wedstrijden th {
+	font-size: 1.5rem;
+}
+
+.tteams {
+	font-weight: bold;
+}
+
+
+		/*STAND*/
+
+.stand {
+	background-color: rgb(192,192,192);
+	padding: 10px;
+	width: 450px;
+}
+
+.stand h2 {
+	width: 330px;
+}
+
+.stand table {
+	border: 1px solid black;
+	margin: 50px;
+	text-align: left;
+	width: 350px;
+}
+
+
+		/*CONTACT*/
+
+.contact-btn {
+	float: right;
+}
+
+.contact-btn a:active {
+	position: relative;
+	bottom: -2px;
+}
+
+.contact-btn a {
+	color: white;
+	margin-right: 30px;
+	padding: 8px 18px;
+	border: 1px solid white;
+}
