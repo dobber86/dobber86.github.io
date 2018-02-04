@@ -72,6 +72,9 @@ input {
 	list-style-type: none;
 }
 
+.teams button {
+	margin-left: 40px;
+}
 
 		/*WEDSTRIJDEN*/
 
@@ -112,6 +115,14 @@ input {
 	font-weight: bold;
 }
 
+.wedstrijden button {
+	margin-left: 50px;
+}
+
+.wedstrijden input {
+	width: 15px;
+	text-align: center;
+}
 
 		/*STAND*/
 
