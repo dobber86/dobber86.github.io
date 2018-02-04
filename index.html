@@ -20,42 +20,39 @@
 		
 			<div class='teams'>
 				<a class='teamstitel'><h2>Teams</h2></a>
+				<button onclick="editTeam()">Opslaan</button>
 				<ul>
 					<li>
-						<h3>
-							<script>
-								document.write(teamA.name);
-							</script>
-						</h3>
+						<h3><input type="text" maxlength="10" id="name_tA" value="Team A"></h3>
 						<ol>
-							<li><input type="text" name="" id="sA1"></li>
-							<li><input type="text" name="" id="sA2"></li>
-							<li><input type="text" name="" id="sA3"></li>
-							<li><input type="text" name="" id="sA4"></li>
+							<li><input type="text" maxlength="10" id="name_tAs1"></li>
+							<li><input type="text" maxlength="10" id="name_tAs2"></li>
+							<li><input type="text" maxlength="10" id="name_tAs3"></li>
+							<li><input type="text" maxlength="10" id="name_tAs4"></li>
 						</ol>
 					</li>
-					<li><h3>Team B</h3>
+					<li><h3><input type="text" maxlength="10" id="name_tB" value="Team B"></h3>
 						<ol>
-							<li>Speler 1</li>
-							<li>Speler 2</li>
-							<li>Speler 3</li>
-							<li>Speler 4</li>
+							<li><input type="text" maxlength="10" id="name_tBs1"></li>
+							<li><input type="text" maxlength="10" id="name_tBs2"></li>
+							<li><input type="text" maxlength="10" id="name_tBs3"></li>
+							<li><input type="text" maxlength="10" id="name_tBs4"></li>
 						</ol>
 					</li>
-					<li><h3>Team C</h3>
+					<li><h3><input type="text" maxlength="10" id="name_tC" value="Team C"></h3>
 						<ol>
-							<li>Speler 1</li>
-							<li>Speler 2</li>
-							<li>Speler 3</li>
-							<li>Speler 4</li>
+							<li><input type="text" maxlength="10" id="name_tCs1"></li>
+							<li><input type="text" maxlength="10" id="name_tCs2"></li>
+							<li><input type="text" maxlength="10" id="name_tCs3"></li>
+							<li><input type="text" maxlength="10" id="name_tCs4"></li>
 						</ol>
 					</li>
-					<li><h3>Team D</h3>
+					<li><h3><input type="text" maxlength="10" id="name_tD" value="Team D"></h3>
 						<ol>
-							<li>Speler 1</li>
-							<li>Speler 2</li>
-							<li>Speler 3</li>
-							<li>Speler 4</li>
+							<li><input type="text" maxlength="10" id="name_tDs1"></li>
+							<li><input type="text" maxlength="10" id="name_tDs2"></li>
+							<li><input type="text" maxlength="10" id="name_tDs3"></li>
+							<li><input type="text" maxlength="10" id="name_tDs4"></li>
 						</ol>
 					</li>
 				</ul>
@@ -63,6 +60,7 @@
 		
 			<div class='wedstrijden'>
 				<h2>Wedstrijden</h2>
+				<button onclick="editScore()">Opslaan</button>
 				<div class="wedstrijdenschema">
 					<div>
 						<table>
@@ -74,172 +72,172 @@
 							<tbody>
 								<tr class="tteams">
 									<td></td>
-									<td><div id="teama"></div></td>
-									<td>12</td>
+									<td class="teama">Team A</td>
+									<td class="tAg1">12</td>
 									<td>-</td>
 									<td>0</td>
-									<td><div id="teamb"></div></td>
+									<td class="teamb">Team B</td>
 								</tr>
-								<tr>
+								<tr >
 									<td>1</td>
-									<td>Speler A</td>
-									<td>3</td>
+									<td class="tAs1">Speler A</td>
+									<td><input type="text" maxlength="1" id="" value="0"></td>
 									<td>-</td>
-									<td>0</td>
-									<td>Speler B</td>
+									<td><input type="text" maxlength="1" id="r1w1r" value="0"></td>
+									<td class="tBs1">Speler B</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tBs2">Speler B</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tBs3">Speler B</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tBs4">Speler B</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team C</td>
+									<td class="teamc">Team C</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler C</td>
+									<td class="tCs1">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler C</td>
+									<td class="tCs2">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler C</td>
+									<td class="tCs3">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler C</td>
+									<td class="tCs4">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA)</script></td>
+									<td class="teama">Team A</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team C</td>
+									<td class="teamc">Team C</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler A</td>
+									<td class="tAs1">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tCs1">Speler C</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tCs2">Speler C</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tCs3">Speler C</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tCs4">Speler C</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team B</td>
+									<td class="teamb">Team B</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler B</td>
+									<td class="tBs1">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler B</td>
+									<td class="tBs2">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler B</td>
+									<td class="tBs3">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler B</td>
+									<td class="tBs4">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								
 							</tbody>
@@ -257,172 +255,172 @@
 							<tbody>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA)</script></td>
+									<td class="teama">Team A</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team B</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler A</td>
+									<td class="tAs1">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team C</td>
+									<td class="teamb">Team B</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamc">Team C</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler C</td>
+									<td class="tBs1">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs1">Speler C</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler C</td>
+									<td class="tBs2">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs2">Speler C</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler C</td>
+									<td class="tBs3">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs3">Speler C</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler C</td>
+									<td class="tBs4">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs4">Speler C</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA)</script></td>
+									<td class="teama">Team A</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team C</td>
+									<td class="teamb">Team B</td>
 								</tr>
-								<tr>
+								<tr >
 									<td>1</td>
-									<td>Speler A</td>
+									<td class="tAs1">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tBs1">Speler B</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tBs2">Speler B</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tBs3">Speler B</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tBs4">Speler B</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team B</td>
+									<td class="teamc">Team C</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler B</td>
+									<td class="tCs1">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler B</td>
+									<td class="tCs2">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler B</td>
+									<td class="tCs3">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler B</td>
+									<td class="tCs4">Speler C</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								
 							</tbody>
@@ -440,172 +438,172 @@
 							<tbody>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA)</script></td>
+									<td class="teama">Team A</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team B</td>
+									<td class="teamc">Team C</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler A</td>
+									<td class="tAs1">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tCs1">Speler C</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tCs2">Speler C</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tCs3">Speler C</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler B</td>
+									<td class="tCs4">Speler C</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team C</td>
+									<td class="teamb">Team B</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler C</td>
+									<td class="tBs1">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler C</td>
+									<td class="tBs2">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler C</td>
+									<td class="tBs3">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler C</td>
+									<td class="tBs4">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA)</script></td>
+									<td class="teama">Team A</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team C</td>
+									<td class="teamd">Team D</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler A</td>
+									<td class="tAs1">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tDs1">Speler D</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler A</td>
+									<td class="tAs2">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tDs2">Speler D</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler A</td>
+									<td class="tAs3">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tDs3">Speler D</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler A</td>
+									<td class="tAs4">Speler A</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler C</td>
+									<td class="tDs4">Speler D</td>
 								</tr>
 								<tr>
 									<td></td>
 								</tr>
 								<tr class="tteams">
 									<td></td>
-									<td>Team B</td>
+									<td class="teamb">Team B</td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team D</td>
+									<td class="teamc">Team C</td>
 								</tr>
 								<tr>
 									<td>1</td>
-									<td>Speler B</td>
+									<td class="tBs1">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs1">Speler C</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Speler B</td>
+									<td class="tBs2">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs2">Speler C</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Speler B</td>
+									<td class="tBs3">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs3">Speler C</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td>Speler B</td>
+									<td class="tBs4">Speler B</td>
 									<td>3</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Speler D</td>
+									<td class="tCs4">Speler C</td>
 								</tr>
 								
 							</tbody>
