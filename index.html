@@ -2,10 +2,16 @@
 <html>
 	<head>
 		<title>Squash Bedrijven Competition</title>
-		<link href="main.css" type="text/css" rel="stylesheet">
-		<script src="main.js"></script>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script src="script.js"></script>
 	</head>
+	
 	<body>
+	
+		<div class="contact-btn">
+			<a href="./contact.html">Contact</a>
+		</div>
+		
 		<header>
 			<h1>Squash Bedrijven Competitie</h1>
 		</header>
@@ -13,12 +19,12 @@
 		<div class='container'>
 		
 			<div class='teams'>
-				<h2>Teams</h2>
+				<a class='teamstitel'><h2>Teams</h2></a>
 				<ul>
 					<li>
 						<h3>
 							<script>
-								document.write(teamA);
+								document.write(teamA.name);
 							</script>
 						</h3>
 						<ol>
@@ -68,11 +74,11 @@
 							<tbody>
 								<tr class="tteams">
 									<td></td>
-									<td><script>document.write(teamA);</script></td>
+									<td><div id="teama"></div></td>
 									<td>12</td>
 									<td>-</td>
 									<td>0</td>
-									<td>Team B</td>
+									<td><div id="teamb"></div></td>
 								</tr>
 								<tr>
 									<td>1</td>
@@ -660,8 +666,8 @@
 			
 		</div>
 		
-		<footer>
-			<div class="contact-btn"><a>Contact</a>
+		<footer>			
+			<div class="copyright">&copy Martin Velthuis
 			</div>
 		</footer>
 			  
