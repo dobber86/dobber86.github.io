@@ -37,6 +37,7 @@ a {
 }
 
 h2 {
+	background-color: rgb(240,240,240);
 	border: 2px solid black;
 	border-radius: 5px;
 	height: 30px;
@@ -44,6 +45,12 @@ h2 {
 	position: relative;
 	left: 50px;
 }
+
+table {
+	background-color: rgb(240,240,240);
+	border-radius: 5px;
+}
+
 
 input {
 	width: 70px;
@@ -96,7 +103,6 @@ input {
 
 .wedstrijden table {
 	border: 1px solid black;
-	border-radius: 5px;
 	margin: 50px;
 	width: 500px;
 }
@@ -138,7 +144,6 @@ input {
 
 .stand table {
 	border: 1px solid black;
-	border-radius: 5px;
 	margin: 50px;
 	text-align: left;
 	width: 350px;
@@ -163,6 +168,10 @@ input {
 	padding: 8px 18px;
 	border: 1px solid white;
 	border-radius: 5px;
+}
+
+.contact-btn a:hover {
+	background-color: rgb(255, 191, 128);
 }
 
 		/*CONTACTGEGEVENS*/
