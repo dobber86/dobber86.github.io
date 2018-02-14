@@ -1,3 +1,48 @@
+window.onload = function onLoad() {
+	updateLocalStorage('teama');
+	updateLocalStorage('teamb');
+	updateLocalStorage('teamc');
+	updateLocalStorage('teamd');
+}
+
+function updateLocalStorage(team) {
+	let teamNaamClass = document.getElementsByClassName(team);														//array voor alle team namen in een class
+	
+	let teamLetter = team.substring(4, 5);																			//team letter pakken
+	teamLetter = teamLetter.toUpperCase();
+
+	for (let teamNaamClassIndex = 0; teamNaamClassIndex < teamNaamClass.length; teamNaamClassIndex++) {				//net zo lang uitvoeren tot het aantal keer dat een team voorkomt 										
+		teamNaamClass[teamNaamClassIndex].innerHTML = localStorage.getItem(`team${teamLetter}`);					//invoer uit local storage halen en schrijven naar class
+	}
+	document.getElementById(`name_t${teamLetter}`).value = localStorage.getItem(`team${teamLetter}`);				//
+
+	// Spelers
+	for (let spelerNummer = 1; spelerNummer < 5; spelerNummer++) { 													//4 spelers in een team
+		let spelerNaamClass = document.getElementsByClassName(`t${teamLetter}s${spelerNummer}`);					//array voor alle namen in een class	
+		for (let spelerNaamClassIndex = 0; spelerNaamClassIndex < spelerNaamClass.length; spelerNaamClassIndex++) {	//net zo lang uitvoeren tot het aantal keer dat een speler voorkomt 
+			spelerNaamClass[spelerNaamClassIndex].innerHTML = localStorage.getItem(`team${teamLetter}s${spelerNummer}`);	//pak de naam uit local storage en schrijven naar class
+		}
+		document.getElementById(`name_t${teamLetter}s${spelerNummer}`).value = localStorage.getItem(`team${teamLetter}s${spelerNummer}`);
+	}
+
+
+	// Scores
+	for (let gameNummer = 1; gameNummer < 7; gameNummer++) {
+		
+		for (let spelerNummer = 1; spelerNummer < 5; spelerNummer++) {											//for loop voor 4 spelers
+			
+			document.getElementById(`g${gameNummer}t${teamLetter}s${spelerNummer}`).value = localStorage.getItem(`g${gameNummer}t${teamLetter}s${spelerNummer}`); // score uit local storage
+		}
+
+		if(teamLetter === 'D' && gameNummer === 6) {
+			editScore();
+		}
+
+	}
+	
+}
+
+
 	// NAMEN BIJWERKEN
 
 function editTeam() {			// indrukken opslaan knop teams	
@@ -9,35 +54,38 @@ function editTeam() {			// indrukken opslaan knop teams
 
 
 function updateNames(team) {
-		let teamNaamClass = document.getElementsByClassName(team);														//array voor alle team namen in een class
+	let teamNaamClass = document.getElementsByClassName(team);														//array voor alle team namen in een class
+	
+	let teamLetter = team.substring(4, 5);																			//team letter pakken
+	teamLetter = teamLetter.toUpperCase();
+	
+	let invoerTeamNaam = document.getElementById('name_t' + teamLetter).value;										//ingevoerde teamnaam lezen
+	localStorage.setItem(`team${teamLetter}`, `${invoerTeamNaam}`);													//teamnaam naar local storage
+
+	for (let teamNaamClassIndex = 0; teamNaamClassIndex < teamNaamClass.length; teamNaamClassIndex++) {				//net zo lang uitvoeren tot het aantal keer dat een team voorkomt 
+		//teamNaamClass[teamNaamClassIndex].innerHTML = invoerTeamNaam;												
+		teamNaamClass[teamNaamClassIndex].innerHTML = localStorage.getItem(`team${teamLetter}`);					//invoer uit local storage halen en schrijven naar class
+	}
+	
+	// Spelers
+	for (let spelerNummer = 1; spelerNummer < 5; spelerNummer++) { 													//4 spelers in een team
 		
-		let teamLetter = team.substring(4, 5);																			//team letter pakken
-		teamLetter = teamLetter.toUpperCase();
+		let spelerNaamClass = document.getElementsByClassName(`t${teamLetter}s${spelerNummer}`);					//array voor alle namen in een class	
+		let invoerSpelerNaam = document.getElementById(`name_t${teamLetter}s${spelerNummer}`).value;				//ingevoerde spelersnaam lezen
+		localStorage.setItem(`team${teamLetter}s${spelerNummer}`, `${invoerSpelerNaam}`);								//spelersnaam naar local storage
 		
-		let invoerTeamNaam = document.getElementById('name_t' + teamLetter).value;										//ingevoerde teamnaam lezen
-		
-		for (let teamNaamClassIndex = 0; teamNaamClassIndex < teamNaamClass.length; teamNaamClassIndex++) {				//net zo lang uitvoeren tot het aantal keer dat een team voorkomt 
-			teamNaamClass[teamNaamClassIndex].innerHTML = invoerTeamNaam;												//invoer schrijven naar class
+		for (let spelerNaamClassIndex = 0; spelerNaamClassIndex < spelerNaamClass.length; spelerNaamClassIndex++) {	//net zo lang uitvoeren tot het aantal keer dat een speler voorkomt 
+			spelerNaamClass[spelerNaamClassIndex].innerHTML = localStorage.getItem(`team${teamLetter}s${spelerNummer}`);	//pak de naam uit local storage en schrijven naar class
 		}
-		
-		// Spelers
-		for (let spelerNummer = 1; spelerNummer < 5; spelerNummer++) { 													//4 spelers in een team
-			
-			let spelerNaamClass = document.getElementsByClassName(`t${teamLetter}s${spelerNummer}`);					//array voor alle namen in een class	
-			let invoerSpelerNaam = document.getElementById(`name_t${teamLetter}s${spelerNummer}`).value;				//ingevoerde spelersnaam lezen
-			
-			for (let spelerNaamClassIndex = 0; spelerNaamClassIndex < spelerNaamClass.length; spelerNaamClassIndex++) {	//net zo lang uitvoeren tot het aantal keer dat een speler voorkomt 
-				spelerNaamClass[spelerNaamClassIndex].innerHTML = invoerSpelerNaam;										//pak de naam uit invoerbox en schrijven naar class
-			}
-		}
+	}
 }
 
 	// WEDSTRIJDEN
 
-	let totaalPuntenTeamA = 0,
-		totaalPuntenTeamB = 0,
-		totaalPuntenTeamC = 0,
-		totaalPuntenTeamD = 0;
+let totaalPuntenTeamA = 0,
+	totaalPuntenTeamB = 0,
+	totaalPuntenTeamC = 0,
+	totaalPuntenTeamD = 0;
 
 function editScore() {			//	indrukken opslaan knop wedstrijden
 	totaalPuntenTeamA = 0;
@@ -60,7 +108,8 @@ function updateScore(team) {
 		for (let spelerNummer = 1; spelerNummer < 5; spelerNummer++) {											//for loop voor 4 spelers
 			
 			let score = Number(document.getElementById(`g${gameNummer}t${teamLetter}s${spelerNummer}`).value);	//score uit inputbox halen
-			spelersScore.push(score);																			//score toevoegen aan spelers score array
+			spelersScore.push(score);
+			localStorage.setItem(`g${gameNummer}t${teamLetter}s${spelerNummer}`, `${score}`);																			//score toevoegen aan spelers score array
 		}
 		
 		function getSum(total, num) {																			//function voor optellen scores in array
@@ -70,7 +119,8 @@ function updateScore(team) {
 		let totaalGameTeam = spelersScore.reduce(getSum);														//totaal score van team
 		document.getElementById(`g${gameNummer}t${teamLetter}`).innerHTML = `${totaalGameTeam}`;				//team score in game schrijven in html
 
-		switch (teamLetter) {																					//punten van alle games per team bijelkaar op tellen
+
+		switch (teamLetter) {	//punten van alle games per team bijelkaar op tellen
 			case 'A':
 				totaalPuntenTeamA += totaalGameTeam;
 				break;
@@ -108,6 +158,7 @@ function updateScore(team) {
 			document.getElementById(`totaalPunten4`).innerHTML = `${totaalPuntenTeamD}`;
 
 			sortTable();
+
 		}
 	}
 }
@@ -133,8 +184,8 @@ function sortTable() {
 
 			shouldSwitch = false;	// Zeg eerst dat er niet geswitched hoeft te worden
 
-			x = rows[i].getElementsByTagName("td")[2];		// Pak 2 elementen om te vergelijken, 1 van huidige rij en 1 van volgende
-			y = rows[i + 1].getElementsByTagName("td")[2];
+			x = rows[i].getElementsByTagName("td")[1];		// Pak 2 elementen om te vergelijken, 1 van huidige rij en 1 van volgende
+			y = rows[i + 1].getElementsByTagName("td")[1];
 
 	      if (Number(x.innerHTML) < Number(y.innerHTML)) {	// Check of de rijen moeten switchen
 
@@ -150,6 +201,26 @@ function sortTable() {
 	    }
 	  }
 }
+
+
+function wedTabelKnop(dag) {
+	let x = document.getElementById(`wedTabel${dag}`);
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
