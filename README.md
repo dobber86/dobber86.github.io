@@ -1,6 +1,3 @@
-Squash Match Scheme
+martinvelthuis.eu
 
-This is my first project I made with HTML, CSS and JavaScript.
-I started with no knowledge with these programming languages. Within three weeks I learned the basics of HTML, CSS and JS and programmed this project.
-
-The webapp is published at martinvelthuis.eu
+I am working on a protfolio webpage for myself. To share all my projects I have done in coding.
